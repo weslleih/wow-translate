@@ -1,9 +1,21 @@
+//Initialization function
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('search').addEventListener('click', function(){
+		wowTranslate.translate();
+	});
+});
+
+//Receives messages from background.js
+chrome.runtime.onMessage.addListener(function(text, sender) {
+		document.getElementById('input').value = text;
+		wowTranslate.translate();
+});
+
 var wowTranstateItem = {
 	id : Number,
 	pt_BR : String,
 	en_US : String
 }
-
 
 var wowTranslate = {
 	//Language of search input
@@ -13,21 +25,20 @@ var wowTranslate = {
 
 	//Object of search and api URLs
 	getURL : {
-		search : function(lang,item){
-			switch(lang){
+		search : function(lang, item) {
+			switch(lang) {
 				case "pt_BR":
-				return "http://us.battle.net/wow/pt/search?f=wowitem&q="+item[lang];
-				break;
-			}
-		},
-		api : function(lang,item){
-			switch(lang){
-				case 'pt_BR':
-					return "http://us.battle.net/api/wow/item/"+item.id+"?locale="+lang;
+					return "http://us.battle.net/wow/pt/search?f=wowitem&q=" + item[lang];
 					break;
 			}
 		},
-
+		api : function(lang, item) {
+			switch(lang) {
+				case 'pt_BR':
+					return "http://us.battle.net/api/wow/item/" + item.id + "?locale=" + lang;
+					break;
+			}
+		},
 		//Ajax function to search in Blizzard page
 		queryWoWSearch : function() {
 

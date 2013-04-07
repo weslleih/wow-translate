@@ -1,10 +1,10 @@
 {
-  "ext-description": {
+  "ext_description": {
     "message": "Traduz nomes de itens entre os vários idiomas de Wordl of Warcraft.",
     "description": "Explica para que a extenção serve"
   },
-  "icon-title": {
-    "message": "Pesquisar novo item",
-    "description": "Explica para que a extenção serve"
+  "context_menu_title": {
+    "message": "Traduzir seleção",
+    "description": "Título do menu de contexto"
   }
 }

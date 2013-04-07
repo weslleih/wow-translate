@@ -1,43 +1,33 @@
 {
-  "name": "WoW Translate",
-  "version": "0.0.1",
-  "manifest_version": 2,
+	"name": "WoW Translate",
+	"version": "0.0.1",
+	"manifest_version": 2,
 
-  // Recommended
-  "description": "__MSG_ext-description__",
-  "icons": { "16": "img/icon16.png",
-             "48": "img/icon48.png",
-             "128": "img/icon128.png"
-           },
-  "default_locale": "pt_BR",
+	// Recommended
+	"description": "__MSG_ext_description__",
+	"icons": {
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"default_locale": "pt_BR",
+	"app": {
+		"launch": {
+      		"local_path": "results.html"
+      	}
+    },
 
-  // Pick one (or none)
-  "browser_action": { "default_icon": "img/icon48.png",
-      				  "default_title": "__MSG_icon-title__"
-      				},
+	"permissions": ["contextMenus", "tabs","storage"],
+	
 
-  // Add any of these that you need
-  "background": {"persistent": false, ...},
-  "background": {"persistent": true, ...},
-  "chrome_url_overrides": {...},
-  "content_scripts": [...],
-  "content_security_policy": "policyString",
-  "file_browser_handlers": [...],
-  "file_handlers": {...},
-  "homepage_url": "http://path/to/homepage",
-  "incognito": "spanning" or "split",
-  "key": "publicKey",
-  "minimum_chrome_version": "versionString",
+	"options_page": "options.html",
 
-  "nacl_modules": [...],
-  "kiosk_enabled": true,
-  "offline_enabled": true,
-  "omnibox": { "keyword": "aString" },
-  "options_page": "aFile.html",
-  "permissions": [...],
-  "plugins": [...],
-  "requirements": {...},
-  "update_url": "http://path/to/updateInfo.xml",
-  "web_accessible_resources": [...],
-  "sandbox": [...]
+	"omnibox": {
+		"keyword": "wt"
+	},
+
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	}
 }
