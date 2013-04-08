@@ -1,8 +1,17 @@
 //Initialization function
 document.addEventListener('DOMContentLoaded', function() {
+	//Add event to search on click the button
 	document.getElementById('search').addEventListener('click', function(){
 		wowTranslate.translate();
 	});
+	//Add event to search on press enter
+	document.getElementById('input').addEventListener('keypress', function(event){
+		if(event.keyCode == 13){
+			wowTranslate.translate();
+		}
+	});
+	//Add translated names in results page
+	
 });
 
 //Receives messages from background.js
@@ -47,6 +56,8 @@ var wowTranslate = {
 		queryWoWAPI : function() {
 
 		},
+	},
+	translate : function(){
+		console.log("postado!");
 	}
-
 }

@@ -6,5 +6,9 @@
   "context_menu_title": {
     "message": "Traduzir seleção",
     "description": "Título do menu de contexto"
+  },
+  "copy": {
+    "message": "Copiar",
+    "description": "Título do menu de contexto"
   }
 }

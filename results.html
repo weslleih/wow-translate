@@ -2,12 +2,24 @@
 <html>
 	<head>
 		<title>WoW Translate</title>
-		<script type="text/javascript" src="script.js"></script>		
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
 		<h1 id="corpo"></h1>
-		<form>
-			<input id="input" type="text"/><button id="search"></button>
-		</form>
+		<input id="input" type="search">
+		<button id="search" type="submit"></button>
+		</input>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th id="lang-in"></th>
+					<th id="lang-out"></th>
+					<th id="copy"></th>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
 	</body>
 </html>

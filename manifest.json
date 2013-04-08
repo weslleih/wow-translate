@@ -17,7 +17,7 @@
       	}
     },
 
-	"permissions": ["contextMenus", "tabs","storage"],
+	"permissions": ["contextMenus", "tabs","storage","http://*.battle.net/*"],
 	
 
 	"options_page": "options.html",
